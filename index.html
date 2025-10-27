@@ -145,17 +145,23 @@
       overflow: hidden;
       backdrop-filter: blur(8px);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .post:hover {
       transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
     }
 
     .post img {
       width: 100%;
       height: 180px;
       object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .post:hover img {
+      transform: scale(1.05);
     }
 
     .post-content {
@@ -165,11 +171,28 @@
     .post-content h3 {
       color: var(--accent3);
       margin-bottom: 0.5rem;
+      font-size: 1.3rem;
     }
 
     .post-content p {
       color: var(--text-muted);
       font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-btn {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      background: linear-gradient(90deg, #8ac926, #ffca3a);
+      color: #000;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+
+    .project-btn:hover {
+      transform: scale(1.05);
     }
 
     .contact {
@@ -248,7 +271,7 @@
       <h1>Kavya's Blog</h1>
       <nav>
         <a href="#home">Home</a>
-        <a href="#posts">Posts</a>
+        <a href="#posts">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -256,32 +279,35 @@
     <section class="hero" id="home">
       <img src="Photo.jpg" alt="Kavya's Profile Picture">
       <h2>Hello, I'm Kavya</h2>
-      <p>Welcome to my personal space where I share stories, tutorials, and experiences from my coding and creative journey. Dive in and enjoy the colors of tech and art!</p>
-      <a href="#posts" class="btn">Explore My Posts</a>
+      <p>Welcome to my personal space where I share stories, tutorials, and experiences from my coding and creative journey. Dive in and explore the projects that shaped my path as a developer!</p>
+      <a href="#posts" class="btn">View My Projects</a>
     </section>
 
     <section class="posts" id="posts">
       <div class="post">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Web Development">
+        <img src="srm.png" alt="Full Stack Project">
         <div class="post-content">
-          <h3>Building Vibrant Websites with CSS</h3>
-          <p>Learn how to make your static websites pop with gradients, shadows, and colorful transitions using only CSS!</p>
+          <h3>SRM University Website (FrontendProject)</h3>
+          <p>Developed a fully responsive 7-page university website using HTML, CSS, and JavaScript — featuring student login validation, department listings, career services, and more. Added smooth transitions, gradient themes, and a clean UI for a modern academic feel.</p>
+          <a href="https://github.com/Kavyamalladi/srm-website" target="_blank" class="project-btn">View on GitHub</a>
         </div>
       </div>
 
       <div class="post">
-        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800" alt="Design Inspiration">
+        <img src="image.png" alt="Vastu Vision Project">
         <div class="post-content">
-          <h3>Design Inspiration from Everyday Life</h3>
-          <p>Colors, balance, and contrast—discover how simple design principles can make your projects visually stunning.</p>
+          <h3>Vastu Vision (AI/ML Project)</h3>
+          <p>Developed an intelligent system that analyzes architectural layouts and provides Vastu compliance suggestions. Built using Python, ML model to detect room orientations and recommend optimizations for harmony and energy flow.</p>
+          <a href="https://github.com/Kavyamalladi/vastu-vision" target="_blank" class="project-btn">View on GitHub</a>
         </div>
       </div>
 
       <div class="post">
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800" alt="Coding Motivation">
+        <img src="profile.jpg" alt="Portfolio Website">
         <div class="post-content">
-          <h3>My Favorite Coding Motivation Tricks</h3>
-          <p>Here are my tips to stay consistent and motivated while working on long coding projects and creative builds.</p>
+          <h3>Personal Portfolio Website</h3>
+          <p>Created my own responsive portfolio using HTML, CSS, and JavaScript to showcase my academic journey, technical skills, and projects. Added animated scroll effects, contact form, and smooth gradient backgrounds for an engaging experience.</p>
+          <a href="https://github.com/Kavyamalladi/portfolio" target="_blank" class="project-btn">View on GitHub</a>
         </div>
       </div>
     </section>
